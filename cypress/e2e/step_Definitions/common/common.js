@@ -1,5 +1,5 @@
 export class common{
-    locators= {
+    headerLocators= {
        "CONTACT US":"//a[contains(text(),'Contact us')]"
    }
     openURL=(URL)=>{
@@ -12,6 +12,6 @@ export class common{
        cy.contains(link).click();
    }
    clickOnHeaderTab(tab){
-       cy.xpath(this.locators[tab]).click();
+       cy.xpath(this.headerLocators[tab]).click();
    }
 }
