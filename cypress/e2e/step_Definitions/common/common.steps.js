@@ -13,3 +13,6 @@ When(/^I click on (.*$)/, (link)=>{
 When(/^I click tab (.*$)/, (tab)=>{
    commonComp.clickOnHeaderTab(tab);
 })
+When(/^I took the snap$/, ()=>{
+   cy.percySnapshot('first-percy-test');
+})
