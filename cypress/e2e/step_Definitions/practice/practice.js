@@ -58,7 +58,11 @@ export class practice {
         // }
         let newArr = newWORD.reduce((prev , curr)=>{
            // prev[curr] = prev[curr]?prev[curr]+1:1;
-           prev[curr] = (prev[curr] || 0) + 1;
+           if(prev[curr]){
+            prev[curr] = prev[curr]+1;
+           }else{
+            prev[curr]=1;
+           }
             return prev;
             
         },{})
@@ -134,6 +138,41 @@ Inside the callback function:
         })
         console.log(arr2);
     }
+
+//     duplicate(){
+
+//         const inputArray=["a","a","b","c","d", "r"];
+
+// let duplicate = [];
+
+// for(let i=0; i <inputArray.length; i++){
+//   for (let j=i+1; j<inputArray.length; j++){
+    
+//     if(inputArray[i]==inputArray[j]&&!duplicate.includes(inputArray[i])){
+      
+//       duplicate.push(inputArray[i]);
+//     }
+    
+//   }
+  
+// }
+// console.log(duplicate);
+//     }
+ bubbleSort(arr) {
+    const len = arr.length;
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements if they are in the wrong order
+                const temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
 
 
 }
